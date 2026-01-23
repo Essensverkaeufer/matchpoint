@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f6f4;
+}
+
+header {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    background: rgba(46, 204, 113, 0.15);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.divider {
+    height: 4px;
+    width: 100px;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    margin: 25px auto;
+    border-radius: 3px;
+}
+
+.badge {
+    width: 90px;
+    height: 90px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 50%;
+    border: 4px solid #2ecc71;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #27ae60;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.08);
+}
+
+.badge::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    border: 2px dashed #2ecc71;
+    opacity: 0.4;
+}
